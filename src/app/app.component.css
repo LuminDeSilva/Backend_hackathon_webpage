@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card .emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .card .name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .card .category {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .card .group {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+
+.selected-emoji {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .selected-emoji .emoji {
+    font-size: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .selected-emoji .name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .selected-emoji .category {
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .selected-emoji .group {
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .selected {
+    background-color: #ffd54f; 
+  }
+  
+  

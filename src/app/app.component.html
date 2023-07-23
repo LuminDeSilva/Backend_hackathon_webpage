@@ -1,0 +1,20 @@
+<div class="container">
+  <div
+    class="card"
+    *ngFor="let emoji of emojis"
+    (click)="selectEmoji(emoji)"
+    [ngClass]="{ 'selected': selectedEmoji === emoji }"
+  >
+    <div [innerHTML]="emoji.htmlCode" class="emoji"></div>
+    <div class="name">{{ emoji.name }}</div>
+    <div class="category">{{ emoji.category }}</div>
+    <div class="group">{{ emoji.group }}</div>
+  </div>
+</div>
+
+<div class="selected-emoji" *ngIf="selectedEmoji">
+  <div [innerHTML]="selectedEmoji.htmlCode" class="emoji"></div>
+  <div class="name">{{ selectedEmoji.name }}</div>
+  <div class="category">{{ selectedEmoji.category }}</div>
+  <div class="group">{{ selectedEmoji.group }}</div>
+</div>
